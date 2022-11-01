@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.estore.testservice</groupId>
     <artifactId>test-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Test Service</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -30,13 +30,20 @@
     </dependencies>
 
     <build>
+        <finalName>Test-Service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
-        <finalName>Test-Service-Boot-App</finalName>
     </build>
 
 </project>
