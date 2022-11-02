@@ -13,6 +13,11 @@ public class TestServiceApplication {
         return "Hello from the other world...";
     }
 
+    @GetMapping("/")
+    public String welcome() {
+        return "Welcome to AWS Cloud....";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(TestServiceApplication.class, args);
     }
